@@ -24,7 +24,7 @@ Pitfalls
 
 # Bridge
 
-* Main difference between Adapater and Bridge is, Bridge works with new code and adapter works with Legacy.
+* Main difference between Adapter and Bridge is, Bridge works with new code and adapter works with Legacy.
 * Why choose bridge? To decouple abstraction and implementation.
 * To do this, we use Encapsulation, Composition and Inheritance.
 * Changes in abstraction won't affect client. (client will be unaware of abstraction logic=> this decouple implementation
@@ -41,3 +41,21 @@ Pitfalls
  * Conceptually difficult to plan.
  * More than just OO principles.
  * Little confusion on what goes where in the code.
+ 
+ # Composite
+ 
+ * Components represent part of whole structure.
+ * Compose objects into Tree structure.
+ * Individual objects treated as composite.
+ * Same operations applied on individual and composites.
+ * Examples will be java.awt.Component, JSF widgets, RESTful service GETs.
+ * Another use case would be, Map's implementation. Option to add one element or add an entire map to the existing collection.
+    (using put element/putAll map)  One element treated same as entire map itself.
+ * Generalizes a hierarchical structure.
+ * NOTE - Composite != Composition. Composite pattern is dealing with hierarchical structure where a composition is just
+ one object containing other.
+ Pitfalls
+ 
+ * Can overly simplify system.
+ * Difficult to restrict what we want to add to it. If we want to restrict that's usually at runtime instead of compile time.
+ * Implementation can be costly and can fairly grow in size given usage of collection.
