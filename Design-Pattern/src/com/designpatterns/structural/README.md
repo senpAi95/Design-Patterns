@@ -54,6 +54,7 @@ Pitfalls
  * Generalizes a hierarchical structure.
  * NOTE - Composite != Composition. Composite pattern is dealing with hierarchical structure where a composition is just
  one object containing other.
+ 
  Pitfalls
  
  * Can overly simplify system.
