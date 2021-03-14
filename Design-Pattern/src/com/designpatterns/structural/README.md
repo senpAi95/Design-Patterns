@@ -29,34 +29,59 @@ Pitfalls
 * To do this, we use Encapsulation, Composition and Inheritance.
 * Changes in abstraction won't affect client. (client will be unaware of abstraction logic=> this decouple implementation
  from the contract or interface client is using.)
- * Bridge allows the level of indirection to add into the application. If we aren't sure about what our end product would
+* Bridge allows the level of indirection to add into the application. If we aren't sure about what our end product would
  be, bridge provides flexibility without breaking things.
- * Examples are JDBC Driver.
- * Emphasis more on Composition over Inheritance.
- * Designed upfront.
+* Examples are JDBC Driver.
+* Emphasis more on Composition over Inheritance.
+* Designed upfront.
  
- Pitfalls
+Pitfalls
  
- * Increases complexity.
- * Conceptually difficult to plan.
- * More than just OO principles.
- * Little confusion on what goes where in the code.
+* Increases complexity.
+* Conceptually difficult to plan.
+* More than just OO principles.
+* Little confusion on what goes where in the code.
  
- # Composite
+# Composite
  
- * Components represent part of whole structure.
- * Compose objects into Tree structure.
- * Individual objects treated as composite.
- * Same operations applied on individual and composites.
- * Examples will be java.awt.Component, JSF widgets, RESTful service GETs.
- * Another use case would be, Map's implementation. Option to add one element or add an entire map to the existing collection.
-    (using put element/putAll map)  One element treated same as entire map itself.
- * Generalizes a hierarchical structure.
- * NOTE - Composite != Composition. Composite pattern is dealing with hierarchical structure where a composition is just
- one object containing other.
+* Components represent part of whole structure.
+* Compose objects into Tree structure.
+* Individual objects treated as composite.
+* Same operations applied on individual and composites.
+* Examples will be java.awt.Component, JSF widgets, RESTful service GETs.
+* Another use case would be, Map's implementation. Option to add one element or add an entire map to the existing collection.
+  (using put element/putAll map)  One element treated same as entire map itself.
+* Generalizes a hierarchical structure.
+* NOTE - Composite != Composition. Composite pattern is dealing with hierarchical structure where a composition is just
+one object containing other.
  
- Pitfalls
+Pitfalls
  
- * Can overly simplify system.
- * Difficult to restrict what we want to add to it. If we want to restrict that's usually at runtime instead of compile time.
- * Implementation can be costly and can fairly grow in size given usage of collection.
+* Can overly simplify system.
+* Difficult to restrict what we want to add to it. If we want to restrict that's usually at runtime instead of compile time.
+* Implementation can be costly and can fairly grow in size given usage of collection.
+ 
+# Decorator
+ 
+* Hierarchical type pattern that builds functionality at each level using composition over similar data types. (Wrapper)
+* Why use? When you want to add another object to add functionality to it without affecting other parts of hierarchy.
+* More than just inheritance.
+* Follow single responsibility principle - every class should have responsibility over part of the functionality 
+provided by the software. And that responsibility should be entirely encapsulated by the class.
+(tldr; It should one thing and do it well.)
+* Compose behavior dynamically.
+* Similar to creational pattern but adding behaviors through creations (So structural).
+* Examples are Java IO InputStream class, All UI components(awt/swing).
+
+Design
+
+* Inheritance based.
+* Utilizes composition and inheritance (is-a, has-a).
+* Alternative to subclassing.
+* Constructor requires an instance from hierarchy to implement composition than override.
+
+Pitfalls
+
+* New class for every feature added.
+* Multiple little objects.
+* Often confused with simple inheritance.
