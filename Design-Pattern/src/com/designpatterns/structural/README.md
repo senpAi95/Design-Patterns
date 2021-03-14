@@ -85,3 +85,46 @@ Pitfalls
 * New class for every feature added.
 * Multiple little objects.
 * Often confused with simple inheritance.
+
+# Facade (pronounced as fasaad)
+
+* Provides a simplified interface to a complex or difficult to use system that is often the result of poorly designed API
+* Make an API easier to use.
+* Reduces dependencies on outside code.
+* Simplify the interface or client usage.
+* A refactoring pattern. (Hides the complex code and only focuses on what it needs to)
+* Examples: java.net.URL
+
+Design
+
+* Class utilizes composition.
+* shouldn't have a need for inheritance.
+* Encompasses full cycle usually.
+* Simply facade contains other classes.
+
+Pitfalls
+
+* You shouldn't use this for new API.
+* It shouldn't deal with inheritance. So should solve Flat problem/structure.
+* Singleton of Structural Pattern ( means often a misused concept as its easy to implement.)
+
+# Flyweight
+
+* Minimizes memory use by sharing data between similar objects.
+* More efficient use of memory.
+* Large number of similar objects.
+* Immutable
+* Examples: java.lang.String, Caching, Wrapper's valueOf().
+
+Design
+
+* Pattern of patterns.
+* Utilizes a Factory pattern.
+* Encompasses creational and structure pattern.
+* Client, Factory, Flyweight, Concrete Flyweight.
+
+Pitfalls
+
+* Complex pattern.
+* Premature optimization unless you have understanding of the application/product.
+* Must understand Factory pattern clearly.
