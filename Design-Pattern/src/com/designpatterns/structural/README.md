@@ -128,3 +128,25 @@ Pitfalls
 * Complex pattern.
 * Premature optimization unless you have understanding of the application/product.
 * Must understand Factory pattern clearly.
+
+# Proxy
+
+* Acts as an interface to something else.
+* Interface by wrapping.
+* Can add functionality.
+* Security, Simplicity, Remote, Cost.
+* Proxy called to access a real object.
+* Example: java.lang.reflect.Proxy, java.rmi.*
+
+Design
+
+* Interface based.
+* Interface and Implementation class.
+* java.land.reflect.InvocationHandler
+* java.lang.reflect.Proxy
+* Client, Interface, InvocationHandler, Proxy, Implementation.
+
+Pitfalls
+
+* We can only have one proxy. (Security/auditing should be implemented in only one proxy)
+* Another abstraction.
