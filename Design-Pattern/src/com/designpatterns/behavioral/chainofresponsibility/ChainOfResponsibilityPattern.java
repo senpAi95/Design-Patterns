@@ -1,7 +1,5 @@
 package com.designpatterns.behavioral.chainofresponsibility;
 
-import java.nio.file.DirectoryIteratorException;
-
 public class ChainOfResponsibilityPattern {
 
     public static void main(String[] args) {
@@ -20,7 +18,6 @@ public class ChainOfResponsibilityPattern {
 
         // above can also be
         // teja.handlerRequest(request);
-
         request = new Request(RequestType.PURCHASE, 2000);
         shiva.handlerRequest(request);
     }

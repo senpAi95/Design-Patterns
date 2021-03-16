@@ -52,4 +52,28 @@ Pitfalls
 * For undo functionality we may need to look at Memento
 * To create copies of command and store in a list, can be considered with Prototype pattern.
 
+# Iterator
+
+* Traverse a container.
+* Doesn't expose the underlying structure to navigate while traversing.
+* Decouples algorithms.
+* Sequential.
+* Examples: java.util.Iterator, java.util.Enumeration.
+
+Design
+
+* Interface based.
+* Factory Method based to get the instance of an iterator.
+* Independent of each other, but fail fast.(2 iterators can't modify the underlying object without an error being thrown) 
+* Enumerators are fail safe.
+* Traversal algorithm is removed from client side.
+* Yells when there is concurrent modification(fail fast) and also can handle it.
+* Little faster than forEach.
+* Iterator, ConcreteIterator.
+
+Pitfalls
+
+* No access to Index while traversing.
+* Unidirectional (only moves forward) (except listIterator which is bidirectional)
+* Speed / Efficiency. (Most/Almost efficinet way to traverse large collection of objects.)
 
