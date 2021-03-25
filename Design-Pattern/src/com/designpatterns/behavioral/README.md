@@ -77,3 +77,37 @@ Pitfalls
 * Unidirectional (only moves forward) (except listIterator which is bidirectional)
 * Speed / Efficiency. (Most/Almost efficinet way to traverse large collection of objects.)
 
+# Interpreter
+
+* Used to represent grammar of a language. Lots of tools using parsing of a grammar.
+    (Could be music notation, mathematical equations or another language)
+* Compilers use it to parse source code.
+* Interpret a sentence.
+* Map a domain speicifc language (CQL, xml parser, this pattern is used to parse)
+* AST
+* Example: java.util.Pattern, java.text.Format
+
+When to use?
+
+* Define a grammar
+* Rules or validation (Can even extend to objects leveraging generics)
+* Special case pattern.
+* We can also consider the Visitor pattern depending on where the change is.
+
+Design
+
+* There will be abstract base class or AbstractExpression that declares an interface for executing operation.
+* That operation is a interpret method.
+* The expression then gets broken into terminal expression representing a leaf of a tree or that doesn't contain other 
+expression.
+* If it contains other expression then its Non terminal expression. Its a compound expression that can call recursively till
+its finally a terminal expression or multiple sub expressions.
+* Can be built by Context, AbstractExpression, NonTerminalExpression, Client.
+
+Pitfalls
+
+* Complexity
+* Class per rule (New Expression = new class)
+* use of other patterns.
+* Adding new variant requires change in all variants of that class.
+* specific case.
