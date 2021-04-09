@@ -111,3 +111,33 @@ Pitfalls
 * use of other patterns.
 * Adding new variant requires change in all variants of that class.
 * specific case.
+
+# Mediator Pattern
+
+* It defines how objects interact with one another without defining them explicitly.
+* Object decoupling, it only has reference to mediator.
+* More specific.
+* Simplified communication.
+
+When to use?
+* Loose coupling with objects.
+* Set of well defined objects.
+* Reusable components.
+* like a Hub/Router.
+* Examples: Java.util.Timer, java.lang.reflecct.Method#invoke()
+
+Design
+
+* Interface based.
+* Concrete class.
+* Minimizes inheritance.
+* Mediator knows about colleagues.
+* Mediator, ConcreteMediator.
+
+Pitfalls
+
+* Not to create a Deity object.
+* Limits subclassing.
+* over or with Command.
+* Mediator Complexity.
+
