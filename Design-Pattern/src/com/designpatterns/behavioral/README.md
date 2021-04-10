@@ -112,7 +112,7 @@ Pitfalls
 * Adding new variant requires change in all variants of that class.
 * specific case.
 
-# Mediator Pattern
+# Mediator
 
 * It defines how objects interact with one another without defining them explicitly.
 * Object decoupling, it only has reference to mediator.
@@ -141,3 +141,26 @@ Pitfalls
 * over or with Command.
 * Mediator Complexity.
 
+# Memento
+
+* Used to capture state.
+* Used to externalize an object state usually to provide a rollback state.
+* Restore Object to previous state.
+* Externalize internal state.
+* Undo/Rollback
+* Shields complex internals
+* Examples: java.util.Date, java.io.Serializable.
+
+Design
+
+* Class based.
+* Originator -> actually creates a memento
+* Caretaker -> manages the copies of memento we create.
+* Memento -> copy of originator we want to store.
+* Magic cookie -> combination of fields to recreate or copy the fields of the object and stored inside memento.
+
+Pitfalls
+
+* Can be expensive.
+* Needs to be light weight. Need to know how much of a history should it keep around.
+* Not to expose originator information. State needs to be transferred to memento but not outside there.

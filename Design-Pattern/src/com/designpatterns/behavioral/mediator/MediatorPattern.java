@@ -1,7 +1,5 @@
 package com.designpatterns.behavioral.mediator;
 
-import kotlin.OverloadResolutionByLambdaReturnType;
-
 public class MediatorPattern {
     public static void main(String[] args) {
         Mediator mediator = new Mediator();
