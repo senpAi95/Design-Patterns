@@ -164,3 +164,31 @@ Pitfalls
 * Can be expensive.
 * Needs to be light weight. Need to know how much of a history should it keep around.
 * Not to expose originator information. State needs to be transferred to memento but not outside there.
+
+# Observer
+
+* Decoupling pattern.
+* Subject can be observed by one or more observers.
+
+When to use?
+
+* One to Many observers.
+* To decouple objects.
+* Event handling capabilities.
+* Publishers/Subscribers.
+* Mostly used in MVC where views are event driven.
+* Examples: java.util.Observer, java.util.EventListener, javax.jms.Topic.
+
+Design
+
+* Subject.
+* Observer.
+* Observable.
+* Views are Observers.
+
+Pitfalls
+
+* Since Subject doesn't know about its observers, there can be unexpected updates.
+* Large sized consequences if update is of large size since we can't control the large update.
+* Doesn't know what changed.
+* Troublesome to troubleshoot.
