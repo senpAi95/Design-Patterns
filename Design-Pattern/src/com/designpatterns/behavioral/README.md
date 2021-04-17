@@ -192,3 +192,25 @@ Pitfalls
 * Large sized consequences if update is of large size since we can't control the large update.
 * Doesn't know what changed.
 * Troublesome to troubleshoot.
+
+# State
+
+* Localize state specific behavior.
+* Has a State object instead of mix of variables.
+* Separates What state we are in from Where we are at.
+* Follows Open Close Principle. Class is closed for changes but open for extensions.
+* Reduces Cyclomatic complexity.
+
+Design
+
+* Abstract Class/Interface.
+* Class based individual concrete class per state.
+* Context or subject that has multiple states is unaware of other states except its next state.
+* Pieces are Context, State, Concrete State.
+
+Pitfalls
+
+* Should know all states of the application.
+* Will end up with more classes.
+* Keep logic out of context.
+* State change triggers.
