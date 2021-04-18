@@ -214,3 +214,27 @@ Pitfalls
 * Will end up with more classes.
 * Keep logic out of context.
 * State change triggers.
+
+# Strategy
+
+* Used to enable strategy/ algorithm selected at runtime.
+* Eliminates Conditional statements.
+* Encapsulates algorithms into individual classes.
+* Difficult to add new strategies.
+* Client is aware of the strategies.
+* Client chooses strategy.
+* Example: java.util.Comparator.
+
+Design
+
+* Design/interface.
+* Concrete class per strategy.
+* Removes if/else conditionals.
+* Strategies are independent.
+* Contains Context, Strategy, ConcreteStrategy.
+
+Pitfalls
+
+* Client should be aware of concrete available strategies.
+* Increased number of classes.
+* 
