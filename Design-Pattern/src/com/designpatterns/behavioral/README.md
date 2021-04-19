@@ -244,7 +244,7 @@ Pitfalls
 * Fantastic technique for code reuse.
 * Common in libraries/frameworks.
 * IOC containers use this to allow pluggable components.
-* Algorithm emphasis.
+* Algorithm emphasis. (Same algorithm but different implementation)
 * Examples: java.util.Collections#sort(), java.util.AbstractList#indexOf().
 
 Design
@@ -257,4 +257,6 @@ Design
 
 Pitfalls
 
-* 
+* Should be restricting access to certain methods correctly.
+* Confusing hierarchy.
+* Difficult program flow if we are extending many templates together for a single flow.
