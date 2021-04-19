@@ -237,4 +237,24 @@ Pitfalls
 
 * Client should be aware of concrete available strategies.
 * Increased number of classes.
+
+# Template
+
+* Used to define an algorithm. Subclasses can redefine parts of algorithm without changing its structure.
+* Fantastic technique for code reuse.
+* Common in libraries/frameworks.
+* IOC containers use this to allow pluggable components.
+* Algorithm emphasis.
+* Examples: java.util.Collections#sort(), java.util.AbstractList#indexOf().
+
+Design
+
+* Abstract base class.
+* Base calls Child class.
+* Hooks.
+* Operations.
+* AbstractBase and Concrete Class.
+
+Pitfalls
+
 * 
