@@ -260,3 +260,26 @@ Pitfalls
 * Should be restricting access to certain methods correctly.
 * Confusing hierarchy.
 * Difficult program flow if we are extending many templates together for a single flow.
+
+# Visitor
+
+* Separates algorithm from an object structure.
+* Adding new features.
+* Maintains Open/Closed principle.
+* Visitor class contains changes and specializations rather than changing specialized objects.
+* Examples: java.lang..model.element.Element, java.lang..model.element.ElementVisitor.
+
+Design
+
+* Interface based.
+* Visitor and Element.
+* Elements have visit method.
+* Visitor knows every element.
+* Visitor, ConcreteVisitor, Element, ConcreteElement.
+* Adding Visitors is easy and encouraged.
+
+Pitfalls
+
+* Plan for adaptability.
+* Indirection may be somewhat confusing.
+* Each visitor may not implement all methods so might have to implement Adapter pattern.
